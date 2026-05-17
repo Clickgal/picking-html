@@ -14,126 +14,73 @@ h1{margin:0;font-size:20px;text-align:center}
 .pedido{padding:12px 12px 4px}
 .pedido h2{display:flex;align-items:center;justify-content:space-between;font-size:16px;margin:8px 0 12px;padding:8px 12px;background:#f0f3ff;border-left:4px solid #5677ff;border-radius:6px}
 .h2right{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#444}
-.item{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid #eee;border-radius:10px;padding:10px 12px;margin:10px 0;box-shadow:0 1px 1px rgba(0,0,0,.03);position:relative;overflow:hidden}
+.item{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid #eee;border-radius:10px;padding:10px 12px;margin:10px 0;box-shadow:0 1px 1px rgba(0,0,0,.03)}
 .img{flex:0 0 auto;width:72px;height:72px;border-radius:8px;overflow:hidden;border:1px solid #eee;background:#f9f9f9;display:flex;align-items:center;justify-content:center}
-.img img{max-width:100%;max-height:100%;display:block}
+.img img{max-width:100%;max-height:100%;display:block;cursor:pointer}
 .cols{display:flex;align-items:center;gap:8px;flex:1 1 0;min-width:0;flex-wrap:wrap}
 .tag{display:inline-flex;align-items:center;font-weight:600;background:#f7f7f7;border:1px solid #eee;border-radius:6px;padding:2px 6px;white-space:nowrap}
 .sku{font-weight:700}
-.titulo{flex:1 1 100%;min-width:200px;white-space:normal;overflow:visible;text-overflow:clip;font-size:14px;line-height:1.2em}
-input.chk, .chkPedido{appearance:none;-webkit-appearance:none;position:relative;display:inline-block;vertical-align:middle;width:20px;height:20px;border:2px solid #222;border-radius:5px;background:#fff;outline:none;cursor:pointer;box-sizing:border-box}
+.titulo{flex:1 1 100%;min-width:200px;white-space:normal;font-size:14px;line-height:1.2em}
+input.chk,.chkPedido{appearance:none;-webkit-appearance:none;position:relative;display:inline-block;vertical-align:middle;width:20px;height:20px;border:2px solid #222;border-radius:5px;background:#fff;outline:none;cursor:pointer;box-sizing:border-box}
 input.chk{margin-left:auto;align-self:center}
 .chkPedido{margin-left:8px}
-input.chk::after, .chkPedido::after{content:'';position:absolute;width:6px;height:10px;border:3px solid #fff;border-top:0;border-left:0;top:50%;left:50%;transform:translate(-50%,-55%) rotate(45deg);opacity:0;pointer-events:none}
-input.chk:checked, .chkPedido:checked{background:#00cc44;border-color:#00cc44}
-input.chk:checked::after, .chkPedido:checked::after{opacity:1}
-input.chk:hover, .chkPedido:hover{box-shadow:0 0 0 3px rgba(0,0,0,.06)}
-input.chk:focus-visible, .chkPedido:focus-visible{box-shadow:0 0 0 3px rgba(0,204,68,.25)}
-.item.done, .item:has(> input.chk:checked){background:#e5e7eb;border-color:#9ca3af}
-.item.done .titulo, .item.done .sku, .item.done .tag, .item:has(> input.chk:checked) .titulo, .item:has(> input.chk:checked) .sku, .item:has(> input.chk:checked) .tag{opacity:.65}
-.item.done .img, .item:has(> input.chk:checked) .img{filter:grayscale(60%) brightness(.95)}
-@media (max-width:420px){.img{width:64px;height:64px}.titulo{min-width:120px}}
+input.chk::after,.chkPedido::after{content:'';position:absolute;width:6px;height:10px;border:3px solid #fff;border-top:0;border-left:0;top:50%;left:50%;transform:translate(-50%,-55%) rotate(45deg);opacity:0;pointer-events:none}
+input.chk:checked,.chkPedido:checked{background:#00cc44;border-color:#00cc44}
+input.chk:checked::after,.chkPedido:checked::after{opacity:1}
+input.chk:hover,.chkPedido:hover{box-shadow:0 0 0 3px rgba(0,0,0,.06)}
+.item.done,.item:has(>input.chk:checked){background:#e5e7eb;border-color:#9ca3af}
+.item.done .titulo,.item.done .sku,.item.done .tag,.item:has(>input.chk:checked) .titulo,.item:has(>input.chk:checked) .sku,.item:has(>input.chk:checked) .tag{opacity:.65}
+.item.done .img,.item:has(>input.chk:checked) .img{filter:grayscale(60%) brightness(.95)}
+@media(max-width:420px){.img{width:64px;height:64px}.titulo{min-width:120px}}
 #lightboxOverlay{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;justify-content:center;align-items:center;z-index:9999}
 #lightboxOverlay img{max-width:90%;max-height:90%;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.4)}
 #lightboxOverlay .closeBtn{position:absolute;top:16px;right:20px;font-size:28px;color:#fff;cursor:pointer;font-weight:bold}
 </style>
 <script>(function(){try{var u=new URL(location.href);if(!u.searchParams.get('v')){u.searchParams.set('v',Date.now().toString());location.replace(u.toString());}}catch(e){}})();</script>
-<script>window.PICK_GEN='20260501023946';</script>
+<script>window.PICK_GEN='20260517172441';</script>
 </head><body>
 <div id='lightboxOverlay'><span class='closeBtn'>&times;</span><img src='' alt='vista ampliada'/></div>
-<header>
-<h1>Lista de picking</h1>
-<div class='fecha'>01/05/2026 02:39</div>
-</header>
-<section class='pedido' data-factura='2026EB0601'>
-<h2><span>Pedido 2026EB0601</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB0601'/></span></h2>
-<div class='item' data-key='2026EB0601|PLU0000696' data-factura='2026EB0601'><div class='img'><span style='font-size:11px;color:#999'>sin imagen</span></div><div class='cols'><span class='tag'>C42-020</span><span class='tag'>x1</span><span class='sku'>PLU0000696</span><span class='titulo'>Playmobil lote tarta 2 pisos lazos rosas comida tienda ciudad medieval</span></div><input class='chk' type='checkbox' data-key='2026EB0601|PLU0000696' data-factura='2026EB0601' id='cb-2026EB0601|PLU0000696-1'/></div>
+<header><h1>Lista de picking</h1>
+<div class='fecha'>17/05/2026 17:24</div></header>
+<section class='pedido' data-factura='2026EB0672'>
+<h2><span>Pedido 2026EB0672</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB0672'/></span></h2>
+<div class='item' data-key='2026EB0672|PLR0004485' data-factura='2026EB0672'><div class='img'><img src='https://cdn.clickgal.es/PLR0004485.jpg' alt='img' loading='lazy'/></div><div class='cols'><span class='tag'>E1C</span><span class='tag'>x1</span><span class='sku'>PLR0004485</span><span class='titulo'>Playmobil clear windshield 9×3 cm car vehicle city house</span></div><input class='chk' type='checkbox' data-key='2026EB0672|PLR0004485' data-factura='2026EB0672' id='cb-2026EB0672|PLR0004485-1'/></div>
 </section>
-<section class='pedido' data-factura='2026EB0602'>
-<h2><span>Pedido 2026EB0602</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB0602'/></span></h2>
-<div class='item' data-key='2026EB0602|PLU0000032' data-factura='2026EB0602'><div class='img'><span style='font-size:11px;color:#999'>sin imagen</span></div><div class='cols'><span class='tag'>C14-031</span><span class='tag'>x1</span><span class='sku'>PLU0000032</span><span class='titulo'>Playmobil cambiador amarillo/blanco globo bebé mueble casa ciudad</span></div><input class='chk' type='checkbox' data-key='2026EB0602|PLU0000032' data-factura='2026EB0602' id='cb-2026EB0602|PLU0000032-1'/></div>
-</section>
-<section class='pedido' data-factura='2026EB0603'>
-<h2><span>Pedido 2026EB0603</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB0603'/></span></h2>
-<div class='item' data-key='2026EB0603|PLR0004687' data-factura='2026EB0603'><div class='img'><span style='font-size:11px;color:#999'>sin imagen</span></div><div class='cols'><span class='tag'>E2B</span><span class='tag'>x1</span><span class='sku'>PLR0004687</span><span class='titulo'>Playmobil 3666 muro gris 16×14 cm puerta castillo medieval suelto</span></div><input class='chk' type='checkbox' data-key='2026EB0603|PLR0004687' data-factura='2026EB0603' id='cb-2026EB0603|PLR0004687-1'/></div>
+<section class='pedido' data-factura='2026EB0673'>
+<h2><span>Pedido 2026EB0673</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB0673'/></span></h2>
+<div class='item' data-key='2026EB0673|PLR0004168' data-factura='2026EB0673'><div class='img'><img src='https://cdn.clickgal.es/PLR0004168.jpg' alt='img' loading='lazy'/></div><div class='cols'><span class='tag'>O07A5B</span><span class='tag'>x1</span><span class='sku'>PLR0004168</span><span class='titulo'>37) 2 pink towels</span></div><input class='chk' type='checkbox' data-key='2026EB0673|PLR0004168' data-factura='2026EB0673' id='cb-2026EB0673|PLR0004168-1'/></div>
 </section>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-  var GEN = (window.PICK_GEN||'');
-  var LS_OK=true; try{localStorage.setItem('t','1');localStorage.removeItem('t');}catch(e){LS_OK=false}
-  function setCookie(n,v,d){try{var e='';if(d){var dt=new Date();dt.setTime(dt.getTime()+d*24*60*60*1000);e='; expires='+dt.toUTCString()}document.cookie=n+'='+encodeURIComponent(v)+e+'; path=/'}catch(e){} }
+  var GEN=(window.PICK_GEN||'');
+  var LS_OK=true;try{localStorage.setItem('t','1');localStorage.removeItem('t');}catch(e){LS_OK=false}
+  function setCookie(n,v,d){try{var e='';if(d){var dt=new Date();dt.setTime(dt.getTime()+d*24*60*60*1000);e='; expires='+dt.toUTCString()}document.cookie=n+'='+encodeURIComponent(v)+e+'; path=/'}catch(e){}}
   function getCookie(n){try{var p=n+'=',a=document.cookie.split(';');for(var i=0;i<a.length;i++){var c=a[i].trim();if(c.indexOf(p)==0)return decodeURIComponent(c.substring(p.length))}}catch(e){}return null}
-  function delCookieStarts(prefix){try{document.cookie.split(';').forEach(function(c){c=c.trim();var eq=c.indexOf('=');var name=(eq>=0?c.substring(0,eq):c);if(name.indexOf(prefix)===0){document.cookie=name+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';}})}catch(e){} }
-  function k(base){return 'pick:'+base}
-  var prevGen = (LS_OK?localStorage.getItem('pick:gen'):getCookie('pick_gen')) || '';
-  if(prevGen !== GEN){
-    if(LS_OK){ try{ for(var i=localStorage.length-1;i>=0;i--){ var key=localStorage.key(i)||''; if(key.indexOf('pick:')===0){ localStorage.removeItem(key); } } }catch(e){} }
+  function delCookieStarts(px){try{document.cookie.split(';').forEach(function(c){c=c.trim();var eq=c.indexOf('=');var nm=(eq>=0?c.substring(0,eq):c);if(nm.indexOf(px)===0){document.cookie=nm+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/'}})}catch(e){}}
+  function k(b){return 'pick:'+b}
+  var prevGen=(LS_OK?localStorage.getItem('pick:gen'):getCookie('pick_gen'))||'';
+  if(prevGen!==GEN){
+    if(LS_OK){try{for(var i=localStorage.length-1;i>=0;i--){var key=localStorage.key(i)||'';if(key.indexOf('pick:')===0){localStorage.removeItem(key)}}}catch(e){}}
     delCookieStarts('pick:');
-    document.querySelectorAll('.item').forEach(function(it){ it.classList.remove('done'); });
-    document.querySelectorAll('input.chk').forEach(function(cb){ cb.checked=false; });
-    if(LS_OK){ try{ localStorage.setItem('pick:gen', GEN); }catch(e){} }
-    setCookie('pick_gen', GEN, 365);
+    document.querySelectorAll('.item').forEach(function(it){it.classList.remove('done')});
+    document.querySelectorAll('input.chk').forEach(function(cb){cb.checked=false});
+    if(LS_OK){try{localStorage.setItem('pick:gen',GEN)}catch(e){}}
+    setCookie('pick_gen',GEN,365);
   }
-  function getKV(base){ var v=null; if(LS_OK){try{v=localStorage.getItem(k(base))}catch(e){}} if(v===null){v=getCookie(k(base))} return v }
-  function setKV(base,val){ if(LS_OK){try{localStorage.setItem(k(base),val)}catch(e){}} setCookie(k(base),val,365) }
-  function applyForKey(baseKey, on){ var sel='input.chk[data-key="'+CSS.escape(baseKey)+'"]'; document.querySelectorAll(sel).forEach(function(x){ x.checked=on; var it=x.closest('.item'); if(it){ it.classList.toggle('done', on); } }); }
-  function setFactura(factura, on){
-    var sel='input.chk[data-factura="'+CSS.escape(factura)+'"]';
-    document.querySelectorAll(sel).forEach(function(cb){
-      var bk=cb.getAttribute('data-key');
-      cb.checked=on; setKV(bk, on?'1':'');
-      var it=cb.closest('.item'); if(it){ it.classList.toggle('done', on); }
-    });
-  }
-  function updateMaster(factura){
-    var all=document.querySelectorAll('input.chk[data-factura="'+CSS.escape(factura)+'"]');
-    if(!all.length){ return; }
-    var checked=0; all.forEach(function(cb){ if(cb.checked) checked++; });
-    var m=document.querySelector('input.chkPedido[data-factura="'+CSS.escape(factura)+'"]');
-    if(m){ m.checked = (checked===all.length); }
-  }
-  document.querySelectorAll('input.chk[data-key]').forEach(function(cb){
-    var bk = cb.getAttribute('data-key');
-    var on = (getKV(bk)==='1');
-    cb.checked = on;
-    var it = cb.closest('.item'); if(it){ it.classList.toggle('done', on); }
-  });
-  // --- al cargar: sincroniza cada maestro según el estado de sus líneas
-  document.querySelectorAll('.pedido').forEach(function(sec){
-    var fac = sec.getAttribute('data-factura') || '';
-    if(fac) updateMaster(fac);
-  });
-  document.querySelectorAll('input.chk[data-key]').forEach(function(cb){
-    cb.addEventListener('change', function(){
-      var bk = cb.getAttribute('data-key'); var on = cb.checked;
-      setKV(bk, on ? '1' : '');
-      applyForKey(bk, on);
-      var fac = cb.getAttribute('data-factura') || '';
-      if(fac) updateMaster(fac);
-    });
-  });
-  // --- cambios en maestros: marcan/desmarcan todas las líneas de esa factura
-  document.querySelectorAll('input.chkPedido[data-factura]').forEach(function(m){
-    m.addEventListener('change', function(){
-      var fac = m.getAttribute('data-factura') || '';
-      if(fac) setFactura(fac, m.checked);
-    });
-  });
-  const overlay=document.getElementById('lightboxOverlay');
-  const bigImg=overlay.querySelector('img');
-  const closeBtn=overlay.querySelector('.closeBtn');
-  document.querySelectorAll('.img img').forEach(function(img){
-    img.addEventListener('click',function(){
-      bigImg.src=this.src;
-      overlay.style.display='flex';
-    });
-  });
-  closeBtn.addEventListener('click',function(){
-    overlay.style.display='none';
-  });
-  overlay.addEventListener('click',function(e){
-    if(e.target===overlay) overlay.style.display='none';
-  });
+  function getKV(b){var v=null;if(LS_OK){try{v=localStorage.getItem(k(b))}catch(e){}}if(v===null){v=getCookie(k(b))}return v}
+  function setKV(b,v){if(LS_OK){try{localStorage.setItem(k(b),v)}catch(e){}}setCookie(k(b),v,365)}
+  function applyForKey(bk,on){var sel='input.chk[data-key="'+CSS.escape(bk)+'"   ]';document.querySelectorAll(sel).forEach(function(x){x.checked=on;var it=x.closest('.item');if(it){it.classList.toggle('done',on)}})}
+  function setFactura(fac,on){document.querySelectorAll('input.chk[data-factura="'+CSS.escape(fac)+'"    ]').forEach(function(cb){var bk=cb.getAttribute('data-key');cb.checked=on;setKV(bk,on?'1':'');var it=cb.closest('.item');if(it){it.classList.toggle('done',on)}})}
+  function updateMaster(fac){var all=document.querySelectorAll('input.chk[data-factura="'+CSS.escape(fac)+'" ]');if(!all.length){return}var n=0;all.forEach(function(cb){if(cb.checked)n++});var m=document.querySelector('input.chkPedido[data-factura="'+CSS.escape(fac)+'"  ]');if(m){m.checked=(n===all.length)}}
+  document.querySelectorAll('input.chk[data-key]').forEach(function(cb){var bk=cb.getAttribute('data-key');var on=(getKV(bk)==='1');cb.checked=on;var it=cb.closest('.item');if(it){it.classList.toggle('done',on)}});
+  document.querySelectorAll('.pedido').forEach(function(sec){var fac=sec.getAttribute('data-factura')||'';if(fac)updateMaster(fac)});
+  document.querySelectorAll('input.chk[data-key]').forEach(function(cb){cb.addEventListener('change',function(){var bk=cb.getAttribute('data-key');var on=cb.checked;setKV(bk,on?'1':'');applyForKey(bk,on);var fac=cb.getAttribute('data-factura')||'';if(fac)updateMaster(fac)})});
+  document.querySelectorAll('input.chkPedido[data-factura]').forEach(function(m){m.addEventListener('change',function(){var fac=m.getAttribute('data-factura')||'';if(fac)setFactura(fac,m.checked)})});
+  var ov=document.getElementById('lightboxOverlay');
+  var bi=ov.querySelector('img');var cb2=ov.querySelector('.closeBtn');
+  document.querySelectorAll('.img img').forEach(function(img){img.addEventListener('click',function(){bi.src=this.src;ov.style.display='flex'})});
+  cb2.addEventListener('click',function(){ov.style.display='none'});
+  ov.addEventListener('click',function(e){if(e.target===ov)ov.style.display='none'});
 });
 </script>
 </body></html>
