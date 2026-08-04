@@ -4,7 +4,7 @@
 <meta http-equiv='Cache-Control' content='no-store, no-cache, must-revalidate, max-age=0'/>
 <meta http-equiv='Pragma' content='no-cache'/>
 <meta http-equiv='Expires' content='0'/>
-<title>Picking m?vil</title>
+<title>Picking movil</title>
 <style>
 html,body{height:100%}
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#fff;color:#222}
@@ -37,18 +37,14 @@ input.chk:hover,.chkPedido:hover{box-shadow:0 0 0 3px rgba(0,0,0,.06)}
 #lightboxOverlay .closeBtn{position:absolute;top:16px;right:20px;font-size:28px;color:#fff;cursor:pointer;font-weight:bold}
 </style>
 <script>(function(){try{var u=new URL(location.href);if(!u.searchParams.get('v')){u.searchParams.set('v',Date.now().toString());location.replace(u.toString());}}catch(e){}})();</script>
-<script>window.PICK_GEN='20260804135256';</script>
+<script>window.PICK_GEN='20260804211444';</script>
 </head><body>
 <div id='lightboxOverlay'><span class='closeBtn'>&times;</span><img src='' alt='vista ampliada'/></div>
 <header><h1>Lista de picking</h1>
-<div class='fecha'>04/08/2026 13:52</div></header>
-<section class='pedido' data-factura='2026EB1227'>
-<h2><span>Pedido 2026EB1227</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB1227'/></span></h2>
-<div class='item' data-key='2026EB1227|PLR0000009' data-factura='2026EB1227'><div class='img'><img src='https://cdn.clickgal.es/PLR0000009.jpg' alt='img' loading='lazy'/></div><div class='cols'><span class='tag'>B1</span><span class='tag'>x1</span><span class='sku'>PLR0000009</span><span class='titulo'>Playmobil 5230 dinosauro anchilosauro marrone preistoria figura animale</span></div><input class='chk' type='checkbox' data-key='2026EB1227|PLR0000009' data-factura='2026EB1227' id='cb-2026EB1227|PLR0000009-1'/></div>
-</section>
-<section class='pedido' data-factura='2026EB1228'>
-<h2><span>Pedido 2026EB1228</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB1228'/></span></h2>
-<div class='item' data-key='2026EB1228|PLR0000773' data-factura='2026EB1228'><div class='img'><img src='https://cdn.clickgal.es/PLR0000773.jpg' alt='img' loading='lazy'/></div><div class='cols'><span class='tag'>C63I</span><span class='tag'>x1</span><span class='sku'>PLR0000773</span><span class='titulo'>13) 2 petites boîtes jaunes</span></div><input class='chk' type='checkbox' data-key='2026EB1228|PLR0000773' data-factura='2026EB1228' id='cb-2026EB1228|PLR0000773-1'/></div>
+<div class='fecha'>04/08/2026 21:14</div></header>
+<section class='pedido' data-factura='2026EB1229'>
+<h2><span>Pedido 2026EB1229</span><span class='h2right'><label>Todo</label><input type='checkbox' class='chkPedido' data-factura='2026EB1229'/></span></h2>
+<div class='item' data-key='2026EB1229|PLR0004676' data-factura='2026EB1229'><div class='img'><img src='https://cdn.clickgal.es/PLR0004676.jpg' alt='img' loading='lazy'/></div><div class='cols'><span class='tag'>C14L</span><span class='tag'>x1</span><span class='sku'>PLR0004676</span><span class='titulo'>2 remos marrones</span></div><input class='chk' type='checkbox' data-key='2026EB1229|PLR0004676' data-factura='2026EB1229' id='cb-2026EB1229|PLR0004676-1'/></div>
 </section>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
@@ -70,11 +66,11 @@ document.addEventListener('DOMContentLoaded',function(){
   function getKV(b){var v=null;if(LS_OK){try{v=localStorage.getItem(k(b))}catch(e){}}if(v===null){v=getCookie(k(b))}return v}
   function setKV(b,v){if(LS_OK){try{localStorage.setItem(k(b),v)}catch(e){}}setCookie(k(b),v,365)}
   function applyForKey(bk,on){var sel='input.chk[data-key="'+CSS.escape(bk)+'"   ]';document.querySelectorAll(sel).forEach(function(x){x.checked=on;var it=x.closest('.item');if(it){it.classList.toggle('done',on)}})}
-  function setFactura(fac,on){document.querySelectorAll('input.chk[data-factura="'+CSS.escape(fac)+'"    ]').forEach(function(cb){var bk=cb.getAttribute('data-key');cb.checked=on;setKV(bk,on?'1':'');var it=cb.closest('.item');if(it){it.classList.toggle('done',on)}})}
+  function setFactura(fac,on){document.querySelectorAll('input.chk[data-factura="'+CSS.escape(fac)+'"    ]').forEach(function(cb){var bk=cb.getAttribute('data-key');cb.checked=on;setKV(bk,onumero'1':'');var it=cb.closest('.item');if(it){it.classList.toggle('done',on)}})}
   function updateMaster(fac){var all=document.querySelectorAll('input.chk[data-factura="'+CSS.escape(fac)+'" ]');if(!all.length){return}var n=0;all.forEach(function(cb){if(cb.checked)n++});var m=document.querySelector('input.chkPedido[data-factura="'+CSS.escape(fac)+'"  ]');if(m){m.checked=(n===all.length)}}
   document.querySelectorAll('input.chk[data-key]').forEach(function(cb){var bk=cb.getAttribute('data-key');var on=(getKV(bk)==='1');cb.checked=on;var it=cb.closest('.item');if(it){it.classList.toggle('done',on)}});
   document.querySelectorAll('.pedido').forEach(function(sec){var fac=sec.getAttribute('data-factura')||'';if(fac)updateMaster(fac)});
-  document.querySelectorAll('input.chk[data-key]').forEach(function(cb){cb.addEventListener('change',function(){var bk=cb.getAttribute('data-key');var on=cb.checked;setKV(bk,on?'1':'');applyForKey(bk,on);var fac=cb.getAttribute('data-factura')||'';if(fac)updateMaster(fac)})});
+  document.querySelectorAll('input.chk[data-key]').forEach(function(cb){cb.addEventListener('change',function(){var bk=cb.getAttribute('data-key');var on=cb.checked;setKV(bk,onumero'1':'');applyForKey(bk,on);var fac=cb.getAttribute('data-factura')||'';if(fac)updateMaster(fac)})});
   document.querySelectorAll('input.chkPedido[data-factura]').forEach(function(m){m.addEventListener('change',function(){var fac=m.getAttribute('data-factura')||'';if(fac)setFactura(fac,m.checked)})});
   var ov=document.getElementById('lightboxOverlay');
   var bi=ov.querySelector('img');var cb2=ov.querySelector('.closeBtn');
